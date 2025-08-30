@@ -1,0 +1,128 @@
+:root {
+    /* Circus Color Palette */
+    --bg-color: #fce4ec; /* Light Pink */
+    --text-color: #d32f2f; /* Bright Red */
+    --accent-color: #ffc107; /* Golden Yellow */
+    --secondary-accent: #2196f3; /* Royal Blue */
+    --button-hover-color: #ffeb3b; /* Lighter Yellow */
+    --border-color: #ff9800; /* Orange */
+
+    /* Playful Font */
+    --font-family: 'Bangers', cursive, sans-serif; /* A bold, comic-book style font */
+    --font-size: 1.5rem; /* Larger and more impactful */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    /* Circus tent stripes background */
+    background: repeating-linear-gradient(
+        45deg,
+        var(--bg-color),
+        var(--bg-color) 20px,
+        #f8bbd0 20px,
+        #f8bbd0 40px
+    );
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 900px;
+    height: 90vh;
+    border: 8px solid var(--border-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 
+                -10px 10px 0px 0px var(--secondary-accent); /* Asymmetrical shadow for a fun tilt */
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #fff;
+    transform: rotate(-2deg); /* A slight tilt for a playful look */
+    transition: transform 0.5s ease-in-out;
+}
+
+.game-container:hover {
+    transform: rotate(0deg); /* Straighten on hover */
+}
+
+#storyCanvas {
+    width: 100%;
+    height: 90%;
+    background-color: #fff; /* White base for drawing */
+    border-bottom: 5px dashed var(--border-color);
+}
+
+.text-box {
+    padding: 10px;
+    height: 25%;
+    overflow-y: auto;
+    font-size: var(--font-size);
+    line-height: 1.3;
+    text-align: center;
+    background-color: var(--secondary-accent);
+    color: #fff;
+    border-top: 5px solid var(--border-color);
+    text-shadow: 2px 2px 0px var(--text-color);
+}
+
+.choice-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--accent-color);
+    border-top: 5px dashed var(--border-color);
+}
+
+.choice-btn {
+    background-color: var(--text-color);
+    color: #fff;
+    border: 4px solid var(--secondary-accent);
+    padding: 1px 25px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    border-radius: 50px; /* Pill shape for a quirky look */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.2); /* Inset shadow for a "pressed" look */
+    text-shadow: 2px 2px 0px var(--secondary-accent);
+    letter-spacing: 1px;
+}
+
+.choice-btn:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05); /* Grow slightly on hover */
+    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
+}
+
+.choice-btn:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.2);
+}
+#image-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-bottom: 5px dashed var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
