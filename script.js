@@ -40,10 +40,10 @@ const storyData = {
 
 // --- Image Mapping ---
 const plotImages = {
-  "a lost circus animal needs to be found.": "animal.png",
-  "a mysterious treasure is hidden under the big top.": "treasure.png",
-  "a mischievous clown is causing magical chaos.": "circus.png",
-  "a grand magical show is in danger of being canceled.": "canceled_show.png"
+  "a lost circus animal needs to be found.": "./animal.png",
+  "a mysterious treasure is hidden under the big top.": "./treasure.png",
+  "a mischievous clown is causing magical chaos.": "./circus.png",
+  "a grand magical show is in danger of being canceled.": "./canceled_show.png"
 };
 
 // --- DOM Elements ---
@@ -130,3 +130,4 @@ function updateImage() {
 
 // --- Start Game ---
 generateStory();
+
